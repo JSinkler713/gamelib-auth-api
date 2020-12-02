@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt')
 const login = (req, res) => {
   console.log('req.user here >>>>>>>>>>>', req.user)
   console.log('req.session here >>>>>>>>>>>', req.session)
-  res.json({ user: req.user.email })
+  res.json({ user: req.user.id })
 }
 
 const register = (req, res) => {
@@ -47,6 +47,8 @@ const logout = (req, res) => {
 
 // This is a utility function for developer use only
 const verify = (req, res) => {
+  console.log('req.user is')
+  console.log(req.user)
 
 }
 

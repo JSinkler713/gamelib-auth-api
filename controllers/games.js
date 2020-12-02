@@ -11,7 +11,6 @@ const index = (req, res) => {
     })
 }
 
-//not working
 const show = (req, res) => {
   console.log('in the show route')
   console.log(req.params)
