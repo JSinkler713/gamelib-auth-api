@@ -10,14 +10,16 @@ const passport = require('./passport')
 const port = process.env.PORT || 4000
 const app = express()
 
-//add cookie parser
+console.log('***********************')
+console.log(process.env.CLIENT_URL)
+console.log('***********************')
 
 // middleware - JSON parsing
 app.use(express.json())
 // middleware - cors
 const corsOptions = {
   // from which URLs do we want to accept requests
-  origin: ['http://localhost:3000'],
+  origin: ['http://localhost:3000', process.env.CLIENT_URL],
   credentials: true, // allow the session cookie to be sent to and from the client
   optionsSuccessStatus: 204
 }
